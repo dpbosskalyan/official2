@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>DP BOSS - KALYAN FIX GAME | Official 2026</title>
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1957761351758363');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1957761351758363&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Noto+Sans+Devanagari:wght@100..900&display=swap');
+        
+        :root {
+            --matka-pink: #ff2d78;
+            --matka-red: #d32f2f;
+            --tg-blue: #0088cc;
+            --bg-main: #FFCC97; /* Requested Color */
+            --text-main: #1e293b;
+        }
+
+        body {
+            font-family: 'Bricolage Grotesque', 'Noto Sans Devanagari', sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            overflow-x: hidden;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 32px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .tg-button-glow {
+            box-shadow: 0 15px 35px -5px rgba(0, 136, 204, 0.4);
+        }
+
+        .shimmer {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .shimmer::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
+            transform: rotate(45deg);
+            animation: shimmerEffect 3s infinite linear;
+        }
+
+        @keyframes shimmerEffect {
+            0% { transform: translateX(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) rotate(45deg); }
+        }
+
+        .mesh-gradient {
+            background: radial-gradient(at 0% 0%, rgba(255, 255, 255, 0.4) 0, transparent 50%),
+                        radial-gradient(at 100% 100%, rgba(0, 136, 204, 0.1) 0, transparent 50%);
+        }
+
+        .hero-title {
+            letter-spacing: -0.04em;
+            line-height: 0.85;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+        }
+
+        .tap-scale:active {
+            transform: scale(0.96);
+        }
+
+        ::-webkit-scrollbar { width: 0; display: none; }
+    </style>
+</head>
+<body class="mesh-gradient min-h-screen">
+
+    <!-- Header / Branding Area -->
+    <div class="fixed top-0 inset-x-0 z-[100] p-4">
+        <div class="max-w-md mx-auto bg-white/90 backdrop-blur-xl rounded-full py-3 px-6 flex items-center justify-between shadow-xl border border-white/40">
+            <div class="flex items-center gap-2">
+                <span class="text-[#0088cc] font-black text-2xl italic leading-none">Dp</span>
+                <span class="text-zinc-900 font-extrabold text-[11px] tracking-tighter uppercase border-l-2 border-zinc-200 pl-2">BOSS.BOSTON</span>
+            </div>
+            <div class="flex items-center gap-2 bg-[#0088cc] text-white px-3 py-1.5 rounded-full shadow-md">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+                </span>
+                <p id="live-users" class="text-[10px] font-black uppercase tracking-tight">4,281 ONLINE</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="px-6 py-12 max-w-4xl mx-auto text-center pt-32">
+        
+        <!-- Status Badge -->
+        <div class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/60 border border-white text-zinc-800 text-[11px] font-black uppercase tracking-[0.15em] mb-12 shadow-sm backdrop-blur-md">
+            <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+            आज का लीक गेम तैयार है
+        </div>
+
+        <h1 class="hero-title text-[72px] md:text-[120px] font-black mb-8 italic uppercase text-zinc-900">
+            KALYAN <br/>
+            <span class="text-transparent bg-clip-text bg-gradient-to-br from-[#0088cc] via-[#005580] to-zinc-900">FIX GAME</span>
+        </h1>
+
+        <p class="text-zinc-700 text-lg md:text-2xl mb-14 max-w-xl mx-auto leading-relaxed font-semibold">
+            भारत का <span class="text-[#0088cc] font-black underline decoration-[#0088cc]/30 underline-offset-8">नंबर 1</span> मटका गेसिंग प्लेटफार्म। रोजाना 100% सटीक पासिंग।
+        </p>
+
+        <!-- Main Button Area (Telegram Blue) -->
+        <div class="max-w-md mx-auto mb-20 relative px-2">
+            <!-- Subtle Glow behind button -->
+            <div class="absolute inset-0 bg-[#0088cc]/10 blur-[40px] rounded-full -z-10"></div>
+            
+            <button onclick="handleJoinClick()" class="tap-scale shimmer group w-full bg-white rounded-[40px] p-1 shadow-2xl tg-button-glow transition-all duration-300">
+                <div class="bg-gradient-to-br from-[#229ED9] to-[#0088cc] rounded-[36px] py-9 px-4 flex flex-col items-center gap-4 border border-white/20 group-hover:from-[#0088cc] group-hover:to-[#0077b5] transition-all">
+                    <div class="flex items-center gap-4">
+                        <div class="w-16 h-16 bg-white rounded-3xl flex items-center justify-center shadow-lg rotate-2 group-hover:rotate-0 transition-transform">
+                            <i data-lucide="send" class="w-10 h-10 text-[#0088cc] fill-[#0088cc]"></i>
+                        </div>
+                        <div class="text-left">
+                            <span class="block text-white text-3xl font-black tracking-tight leading-none mb-1">ज्वाइन टेलीग्राम</span>
+                            <div class="flex items-center gap-2">
+                                <span class="text-white/90 text-[11px] font-bold uppercase tracking-[0.25em]">
+                                    (JOIN NOW)
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </button>
+        </div>
+
+        <!-- Features Grid -->
+        <div class="grid grid-cols-2 gap-5 text-left mb-24">
+            <div class="glass-panel p-6">
+                <div class="w-12 h-12 bg-[#0088cc]/10 rounded-2xl flex items-center justify-center mb-5 text-[#0088cc] border border-[#0088cc]/10">
+                    <i data-lucide="crown" class="w-6 h-6"></i>
+                </div>
+                <h4 class="font-black text-[13px] uppercase tracking-tight mb-2 text-zinc-900">V.I.P गेम</h4>
+                <p class="text-zinc-600 text-[11px] leading-relaxed font-medium">एक्सपर्ट्स द्वारा रिसर्च की गई 100% फिक्स जोड़ियां।</p>
+            </div>
+
+            <div class="glass-panel p-6">
+                <div class="w-12 h-12 bg-[#0088cc]/10 rounded-2xl flex items-center justify-center mb-5 text-[#0088cc] border border-[#0088cc]/10">
+                    <i data-lucide="zap" class="w-6 h-6"></i>
+                </div>
+                <h4 class="font-black text-[13px] uppercase tracking-tight mb-2 text-zinc-900">फास्ट रिजल्ट</h4>
+                <p class="text-zinc-600 text-[11px] leading-relaxed font-medium">रिजल्ट की अपडेट सबसे पहले हमारे टेलीग्राम पर।</p>
+            </div>
+        </div>
+
+        <!-- Feedback Section -->
+        <div class="glass-panel p-10 text-center mb-24 relative overflow-hidden">
+            <div class="absolute top-0 right-0 -mr-6 -mt-6 opacity-[0.03]">
+                <i data-lucide="quote" class="w-32 h-32 text-zinc-900"></i>
+            </div>
+            <div class="flex justify-center gap-1.5 mb-6">
+                <i data-lucide="star" class="w-5 h-5 fill-amber-500 text-amber-500"></i>
+                <i data-lucide="star" class="w-5 h-5 fill-amber-500 text-amber-500"></i>
+                <i data-lucide="star" class="w-5 h-5 fill-amber-500 text-amber-500"></i>
+                <i data-lucide="star" class="w-5 h-5 fill-amber-500 text-amber-500"></i>
+                <i data-lucide="star" class="w-5 h-5 fill-amber-500 text-amber-500"></i>
+            </div>
+            <h3 class="text-3xl font-black italic mb-4 text-zinc-900 leading-tight">"भरोसा ही हमारी पहचान है!"</h3>
+            <p class="text-zinc-600 text-sm font-semibold tracking-tight">हजारों सदस्य रोज मुनाफा कमा रहे हैं। आज ही टेलीग्राम ज्वाइन करें और अपना लॉस कवर करें।</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="p-12 pb-36 text-center border-t border-black/5 bg-white/20 backdrop-blur-md">
+        <div class="flex flex-col items-center gap-8">
+            <div class="flex items-center gap-3 opacity-60">
+                <div class="w-8 h-8 bg-[#0088cc] rounded-lg flex items-center justify-center shadow-sm">
+                    <span class="text-white font-black italic">D</span>
+                </div>
+                <span class="text-sm font-black uppercase tracking-[0.3em] text-zinc-900">DP BOSS 2026</span>
+            </div>
+            <p class="text-[11px] text-zinc-600 max-w-xs mx-auto leading-loose font-medium">
+                अस्वीकरण: यह वेबसाइट केवल मनोरंजन के लिए है। हम सट्टा मटका या किसी भी अवैध जुआ गतिविधि का समर्थन नहीं करते हैं। 18+ केवल।
+            </p>
+            <div class="flex gap-8 text-[10px] font-black text-zinc-500 uppercase tracking-widest border-t border-black/5 pt-8 w-full justify-center">
+                <a href="#" class="hover:text-[#0088cc] transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-[#0088cc] transition-colors">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Sticky CTA -->
+    <div class="fixed bottom-6 inset-x-6 z-[100] md:hidden">
+        <button onclick="handleJoinClick()" class="tap-scale w-full bg-gradient-to-r from-[#229ED9] to-[#0088cc] text-white py-5 rounded-[24px] font-black text-xl flex items-center justify-center gap-3 shadow-[0_15px_35px_-5px_rgba(0,136,204,0.4)] border-b-4 border-[#0077b5] active:border-b-0 transition-all">
+            <i data-lucide="send" class="w-7 h-7 fill-white"></i>
+            टेलीग्राम (JOIN NOW)
+        </button>
+    </div>
+
+    <script>
+        lucide.createIcons();
+        const telegramLink = "https://t.me/+OLc4Kq52_9MzMzk9";
+        let count = 4281;
+
+        function updateCounter() {
+            count += Math.floor(Math.random() * 9) - 4;
+            const el = document.getElementById('live-users');
+            if(el) el.innerText = count.toLocaleString() + " ONLINE";
+        }
+        setInterval(updateCounter, 2500);
+
+        function handleJoinClick() {
+            const btn = event.currentTarget;
+            if (typeof fbq !== 'undefined') { fbq('track', 'Lead'); }
+            btn.style.transform = "scale(0.95)";
+            setTimeout(() => {
+                window.location.href = telegramLink;
+                setTimeout(() => { btn.style.transform = "scale(1)"; }, 1000);
+            }, 200);
+        }
+
+        const observerOptions = { threshold: 0.15 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-12');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.glass-panel').forEach(el => {
+            el.classList.add('opacity-0', 'translate-y-12', 'transition-all', 'duration-700', 'ease-out');
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
